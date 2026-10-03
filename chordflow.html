@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChordFlow · Calobra Instruments</title>
+<meta name="description" content="ChordFlow is a chord progression generator plugin. Pick a key and a genre, press Generate, drag the MIDI into your DAW. VST3 and standalone.">
+<meta name="theme-color" content="#e6e6ea">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="img/chordflow.webp">
+</head>
+<body data-p="chordflow">
+
+<div class="ticker" aria-label="Launch sale">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Calobra Instruments, home">calobra<i></i></a>
+    <nav aria-label="Main">
+      <div class="nav-drop"><a href="index.html#plugins" aria-haspopup="true">Plugins</a><div class="mega"></div></div>
+      <a href="index.html#bundle">Bundle</a>
+      <a href="index.html#free">Free plugin</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="index.html#bundle">Get the bundle<span> · <b data-price="bundle"></b></span></a>
+  </div>
+</header>
+
+<main>
+  <section class="p-hero">
+    <div class="wrap">
+      <div class="reveal">
+        <a class="crumbs label" href="index.html#plugins">← All plugins</a>
+        <span class="label kind">Chord generator · MIDI</span>
+        <h1>chordflow<span class="dot">.</span></h1>
+        <p class="lead">Pick a key and a genre, press Generate, and get a progression that sounds like the genre. Drag it into your DAW. No theory needed.</p>
+        <p class="price-line"><span data-price="chordflow"></span> <s data-was="chordflow"></s></p>
+        <div class="btns">
+          <a class="btn" data-buy="chordflow" href="#">Buy ChordFlow · <span data-price="chordflow"></span></a>
+          <a class="btn ghost" data-demo="chordflow" href="#">Try the free demo</a>
+        </div>
+        <dl class="specs">
+          <div><dt>Formats</dt><dd>VST3 · App</dd></div>
+          <div><dt>Genres</dt><dd>9</dd></div>
+          <div><dt>Length</dt><dd>4 · 8 · 16 bars</dd></div>
+        </dl>
+      </div>
+      <div class="shot reveal"><img src="img/chordflow.webp" width="1100" height="680" alt="ChordFlow with a generated progression, the piano roll and the chord suggestion drawer"></div>
+    </div>
+  </section>
+
+  <section class="block" id="listen">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Listen</span><h2>hear it first.</h2></div>
+        <p>Demos played through ChordFlow, straight out of the plugin.</p>
+      </div>
+      <div class="demos reveal" data-demos="chordflow"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Workflow</span><h2>generate, then make it yours.</h2></div>
+        
+      </div>
+      <div class="reveal">
+        <ol class="steps">
+          <li><span><b>Set the key and genre.</b> Ten scales, from major and minor to Dorian, Lydian and both pentatonics.</span></li>
+          <li><span><b>Dial Mood and Complexity.</b> Mood runs dark to bright. Complexity runs from plain triads to 9ths, 11ths and 13ths.</span></li>
+          <li><span><b>Press Generate.</b> The timeline fills with chords, each slot as wide as it lasts.</span></li>
+          <li><span><b>Lock what you like, re-roll the rest.</b> Pick a slot and the drawer suggests chords that fit, ranked by stars.</span></li>
+          <li><span><b>Drag MIDI into your DAW,</b> or let it play in sync with the host.</span></li>
+          <li><span><b>Save it to your library.</b> The preset menu also keeps your last 20 generations, so a good idea is never lost.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Genre profiles</span><h2>nine genres, each with its own taste.</h2></div>
+        <p>Each genre sets which chord colours come up and how often the chords change.</p>
+      </div>
+      <div class="reveal">
+        <div class="table-scroll"><table>
+          <thead><tr><th>Genre</th><th>Chord colours it reaches for</th><th>Chords change</th></tr></thead>
+          <tbody>
+            <tr><td>Pop</td><td>add9, 7ths, sus2 and sus4</td><td>Mostly every bar</td></tr>
+            <tr><td>EDM</td><td>sus2 and sus4, add9</td><td>Every bar, sometimes two</td></tr>
+            <tr><td>House</td><td>minor 7ths, 9ths, sus4</td><td>Mostly every bar</td></tr>
+            <tr><td>RnB</td><td>9ths, maj7 and 7ths, 11ths</td><td>Every bar, often every half bar</td></tr>
+            <tr><td>Neo-soul</td><td>9ths, 11ths, maj7, 13ths</td><td>Every bar or half bar</td></tr>
+            <tr><td>Jazz</td><td>7ths and maj7, 9ths, 13ths, ♭9 on dominants</td><td>Often every half bar</td></tr>
+            <tr><td>Lo-fi</td><td>maj7 and 7ths, 9ths</td><td>Mostly every bar</td></tr>
+            <tr><td>Trap</td><td>Plain triads, a sparse add9</td><td>Every one or two bars</td></tr>
+            <tr><td>Cinematic</td><td>Plain triads, add9, sus2</td><td>Mostly every two bars</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Playback</span><h2>ten rhythms, four voicings.</h2></div>
+        <p>Rhythm turns the progression into notes, for playback and for Drag MIDI alike. Humanize nudges timing and velocity, and the same take plays back every time.</p>
+      </div>
+      <div class="reveal">
+        <ul class="chips"><li>Sustain</li><li>Stabs 1/4</li><li>Stabs 1/8</li><li>Offbeat</li><li>Strum Up</li><li>Strum Down</li><li>Arp Up</li><li>Arp Down</li><li>Arp Up-Down</li><li>Pulse 1/16</li></ul>
+        <ul class="chips"><li><b>Close</b></li><li><b>Open</b></li><li><b>Spread</b></li><li><b>Drop-2</b></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta-band reveal">
+      <h2>get chordflow.</h2>
+      <p><s data-was="chordflow"></s> <span data-price="chordflow"></span> · one licence, yours forever, free updates</p>
+      <div class="btns"><a class="btn on-c" data-buy="chordflow" href="#">Buy now · <span data-price="chordflow"></span></a><a class="btn ghost on-c" data-demo="chordflow" href="#">Try the free demo</a></div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="More plugins">
+    <a href="move-a-side-chain.html" data-p="moveaside"><span class="label">← Previous</span><strong>Move-a-Side chain</strong></a>
+    <a href="twig.html" data-p="twig"><span class="label">Next →</span><strong>Twig</strong></a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="foot-brand">calobra<i>.</i></p>
+        <p class="legal">© 2026 Calobra Instruments</p>
+      </div>
+      <ul>
+        <li><a href="lucha-effects.html">Lucha Effects</a></li>
+        <li><a href="move-a-side-chain.html">Move-a-Side chain</a></li>
+        <li><a href="chordflow.html">ChordFlow</a></li>
+        <li><a href="twig.html">Twig</a></li>
+        <li><a href="robovoco.html">RoboVoco</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+<script src="scratch.js"></script>
+</body>
+</html>

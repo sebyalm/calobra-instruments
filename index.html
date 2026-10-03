@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calobra Instruments · VST plugins</title>
+<meta name="description" content="Five VST3 plugins: Lucha Effects, Move-a-Side chain, ChordFlow, Twig and RoboVoco. One licence, yours forever.">
+<meta name="theme-color" content="#e6e6ea">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="preload" as="image" href="img/lucha.webp">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ticker" aria-label="Launch sale">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Calobra Instruments, home">calobra<i></i></a>
+    <nav aria-label="Main">
+      <div class="nav-drop"><a href="#plugins" aria-haspopup="true">Plugins</a><div class="mega"></div></div>
+      <a href="#bundle">Bundle</a>
+      <a href="#free">Free plugin</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="#bundle">Get the bundle<span> · <b data-price="bundle"></b></span></a>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div>
+        <div class="label reveal">VST3 · AU · Standalone</div>
+        <h1 class="reveal">sound like nobody else<span class="dot">.</span></h1>
+        <p class="sub reveal">Five plugins with real character: a multi-effect in a wrestling ring, a sidechain ducker that moves your stereo field, a chord generator, a synth you grow from a sample and a vocal robot.</p>
+        <div class="btns reveal">
+          <a class="btn" href="#bundle">Get all five · <s data-was="bundle"></s> <span data-price="bundle"></span></a>
+          <a class="btn ghost" href="#free">Get Lucha Effects free</a>
+        </div>
+      </div>
+
+      <div class="reveal"><div class="reel" id="reel" role="img" aria-label="An animated reel showing all five Calobra plugins, one after another, then the bundle"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ LINEUP ============ -->
+  <section class="lineup" id="plugins">
+    <div class="wrap">
+      <div class="lineup-head">
+        <h2 class="big reveal">the lineup<span class="dot">.</span></h2>
+      </div>
+      <div class="tiles" id="tiles"></div>
+    </div>
+  </section>
+
+  <!-- ============ LUCHA EFFECTS ============ -->
+  <section class="plugin" id="lucha" data-p="lucha">
+    <div class="wrap">
+      <div class="copy reveal">
+        <span class="label kind">Multi-effect · Free</span>
+        <h2>lucha effects<span class="dot">.</span></h2>
+        <p class="lead">A multi-effect where every preset is a luchador.</p>
+        <p class="price-line">Free</p>
+        <div class="btns"><a class="btn" href="#free">Get it free</a><a class="btn ghost" href="lucha-effects.html">Explore →</a></div>
+      </div>
+      <div class="reveal">
+        <div class="shot"><img src="img/lucha.webp" width="1400" height="923" alt="Lucha Effects: a luchador mask on a pedestal in a 3D wrestling ring, eight macro knobs on the turnbuckles and four move buttons on the apron"></div>
+        <div class="roster" aria-label="The nine luchadores">
+          <img src="img/masks/tornado_rojo.webp" width="300" height="400" alt="El Tornado Rojo" loading="lazy">
+          <img src="img/masks/espectro_azul.webp" width="300" height="400" alt="Espectro Azul" loading="lazy">
+          <img src="img/masks/colmillo_blanco.webp" width="300" height="400" alt="Colmillo Blanco" loading="lazy">
+          <img src="img/masks/la_calavera.webp" width="300" height="400" alt="La Calavera" loading="lazy">
+          <img src="img/masks/monarca_plata.webp" width="300" height="400" alt="El Monarca de Plata" loading="lazy">
+          <img src="img/masks/relampago.webp" width="300" height="400" alt="Relampago" loading="lazy">
+          <img src="img/masks/hierro_gris.webp" width="300" height="400" alt="Hierro Gris" loading="lazy">
+          <img src="img/masks/neblina.webp" width="300" height="400" alt="Neblina" loading="lazy">
+          <img src="img/masks/diablo_carmesi.webp" width="300" height="400" alt="Diablo Carmesi" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MOVE-A-SIDE CHAIN ============ -->
+  <section class="plugin flip" id="moveaside" data-p="moveaside">
+    <div class="wrap">
+      <div class="copy reveal">
+        <span class="label kind">Ducker · Stereo width</span>
+        <h2>move-a-side chain<span class="dot">.</span></h2>
+        <p class="lead">A sidechain ducker that moves your stereo width.</p>
+        <p class="price-line"><span data-price="moveaside"></span> <s data-was="moveaside"></s></p>
+        <div class="btns"><a class="btn" data-buy="moveaside" href="#">Buy</a><a class="btn ghost" href="move-a-side-chain.html">Explore →</a></div>
+      </div>
+      <div class="shot reveal"><img src="img/moveaside.webp" width="1400" height="925" alt="Move-a-Side chain: red Sidechain, Link and Stereo Width panels with VU meters" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- ============ CHORDFLOW ============ -->
+  <section class="plugin" id="chordflow" data-p="chordflow">
+    <div class="wrap">
+      <div class="copy reveal">
+        <span class="label kind">Chord generator · MIDI</span>
+        <h2>chordflow<span class="dot">.</span></h2>
+        <p class="lead">Pick a key and a genre, then drag the chords into your DAW.</p>
+        <p class="price-line"><span data-price="chordflow"></span> <s data-was="chordflow"></s></p>
+        <div class="btns"><a class="btn" data-buy="chordflow" href="#">Buy</a><a class="btn ghost" href="chordflow.html">Explore →</a></div>
+      </div>
+      <div class="shot reveal"><img src="img/chordflow.webp" width="1100" height="680" alt="ChordFlow with a generated progression, the piano roll and the chord suggestion drawer" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- ============ TWIG ============ -->
+  <section class="plugin flip" id="twig" data-p="twig">
+    <div class="wrap">
+      <div class="copy reveal">
+        <span class="label kind">Resynthesis synth</span>
+        <h2>twig<span class="dot">.</span></h2>
+        <p class="lead">Drop in a sample and grow a playable synth from it.</p>
+        <p class="price-line"><span data-price="twig"></span> <s data-was="twig"></s></p>
+        <div class="btns"><a class="btn" data-buy="twig" href="#">Buy</a><a class="btn ghost" href="twig.html">Explore →</a></div>
+      </div>
+      <div class="shot reveal"><img src="img/twig.webp" width="902" height="708" alt="Twig with a bass sample loaded: its spectrum and a tree of twelve mutation families on the green LCD, above six keys and the Family, Weird, DNA and Cross knobs" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- ============ ROBOVOCO ============ -->
+  <section class="plugin" id="robovoco" data-p="robovoco">
+    <div class="wrap">
+      <div class="copy reveal">
+        <span class="label kind">Vocal effect</span>
+        <h2>robovoco<span class="dot">.</span></h2>
+        <p class="lead">Turn any vocal into a robot, a vocoder, a talk box or an acid line.</p>
+        <p class="price-line"><span data-price="robovoco"></span> <s data-was="robovoco"></s></p>
+        <div class="btns"><a class="btn" data-buy="robovoco" href="#">Buy</a><a class="btn ghost" href="robovoco.html">Explore →</a></div>
+      </div>
+      <div class="shot reveal">
+        <img src="img/robovoco.webp" width="1280" height="754" alt="RoboVoco: a folded paper face, mode buttons, a 24-band display and large knobs" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUNDLE ============ -->
+  <section class="bundle" id="bundle">
+    <div class="wrap">
+      <div class="bundle-card reveal">
+        <div>
+          <span class="label">The bundle</span>
+          <h2>the whole rack<span>.</span></h2>
+          <p class="lead">All five plugins, Lucha Effects included. One licence, yours forever, free updates.</p>
+          <p class="price-big"><span data-price="bundle"></span> <s data-was="bundle"></s> <small id="save-tag"></small></p>
+          <div id="clock-wrap" hidden>
+            <div class="label" style="margin-bottom:10px">Launch prices end in</div>
+            <div class="clock" id="clock" role="timer">
+              <div><b data-t="d">0</b><span>days</span></div>
+              <div><b data-t="h">0</b><span>hrs</span></div>
+              <div><b data-t="m">0</b><span>min</span></div>
+              <div><b data-t="s">0</b><span>sec</span></div>
+            </div>
+          </div>
+          <div class="btns"><a class="btn" data-buy="bundle" href="#">Get the bundle →</a></div>
+          <p class="fine">Instant download · Windows 64-bit, macOS for Lucha Effects and Move-a-Side chain</p>
+        </div>
+        <div class="fan" aria-hidden="true">
+          <img src="img/chordflow.webp" alt="" loading="lazy">
+          <img src="img/twig.webp" alt="" loading="lazy">
+          <img src="img/robovoco.webp" alt="" loading="lazy">
+          <img src="img/moveaside.webp" alt="" loading="lazy">
+          <img src="img/lucha.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FREE LUCHA ============ -->
+  <section class="wrap" id="free">
+    <div class="free reveal" data-p="lucha">
+      <div class="masks" aria-hidden="true">
+        <img src="img/masks/tornado_rojo.webp" alt="" loading="lazy">
+        <img src="img/masks/la_calavera.webp" alt="" loading="lazy">
+        <img src="img/masks/espectro_azul.webp" alt="" loading="lazy">
+        <img src="img/masks/diablo_carmesi.webp" alt="" loading="lazy">
+        <img src="img/masks/relampago.webp" alt="" loading="lazy">
+      </div>
+      <h2>get lucha effects free.</h2>
+      <p>Enter your email and we'll send you the full plugin, all nine luchadores and 36 moves. You'll also hear about new plugins first.</p>
+      <form id="free-form" novalidate>
+        <label class="sr" for="free-email">Email address</label>
+        <input id="free-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn" type="submit">Send it to me</button>
+      </form>
+      <p class="msg" id="free-msg" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="wrap faq" id="faq">
+    <h2 class="big reveal">questions<span class="dot">.</span></h2>
+    <div class="reveal">
+      <details><summary>What do I get when I buy?</summary><p>Each plugin as a VST3 and as a standalone app. Lucha Effects and Move-a-Side chain also come as AU on macOS.</p></details>
+      <details><summary>Is it a one-time purchase?</summary><p>Yes. You buy a licence once and keep it, with free updates. No subscription.</p></details>
+      <details><summary>Is Lucha Effects really free?</summary><p>Yes. Enter your email and we'll send you the full plugin, with all nine luchadores and 36 moves.</p></details>
+      <details><summary>Can I try the paid plugins first?</summary><p>Yes. Move-a-Side chain, ChordFlow, Twig and RoboVoco each have a free, limited demo you can run in your own sessions.</p></details>
+      <details><summary>Which systems does it run on?</summary><p>All five run on Windows 64-bit. Lucha Effects and Move-a-Side chain also run on macOS as VST3 and AU.</p></details>
+      <details><summary>How do I install a plugin?</summary><p>Copy the .vst3 file into C:\Program Files\Common Files\VST3, then rescan plugins in your DAW. The standalone app runs on its own, no DAW needed.</p></details>
+      <details><summary>Is the bundle cheaper than buying one by one?</summary><p>Yes. The bundle gets you all five for less than the four paid licences on their own.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="foot-brand">calobra<i>.</i></p>
+        <p class="legal">© 2026 Calobra Instruments</p>
+      </div>
+      <ul>
+        <li><a href="lucha-effects.html">Lucha Effects</a></li>
+        <li><a href="move-a-side-chain.html">Move-a-Side chain</a></li>
+        <li><a href="chordflow.html">ChordFlow</a></li>
+        <li><a href="twig.html">Twig</a></li>
+        <li><a href="robovoco.html">RoboVoco</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="site.js"></script>
+<script src="scratch.js"></script>
+</body>
+</html>

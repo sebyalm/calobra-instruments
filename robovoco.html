@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboVoco · Calobra Instruments</title>
+<meta name="description" content="RoboVoco turns a vocal into a robot, a vocoder, a talk box or an acid line. It finds the pitch and builds its own carrier. VST3 and standalone.">
+<meta name="theme-color" content="#e6e6ea">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="img/robovoco.webp">
+</head>
+<body data-p="robovoco">
+
+<div class="ticker" aria-label="Launch sale">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Calobra Instruments, home">calobra<i></i></a>
+    <nav aria-label="Main">
+      <div class="nav-drop"><a href="index.html#plugins" aria-haspopup="true">Plugins</a><div class="mega"></div></div>
+      <a href="index.html#bundle">Bundle</a>
+      <a href="index.html#free">Free plugin</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="index.html#bundle">Get the bundle<span> · <b data-price="bundle"></b></span></a>
+  </div>
+</header>
+
+<main>
+  <section class="p-hero">
+    <div class="wrap">
+      <div class="reveal">
+        <a class="crumbs label" href="index.html#plugins">← All plugins</a>
+        <span class="label kind">Vocal effect</span>
+        <h1>robovoco<span class="dot">.</span></h1>
+        <p class="lead">Put it on a vocal and turn it into a robot, a vocoder, a talk box or an acid line. It finds the pitch and builds its own carrier.</p>
+        <p class="price-line"><span data-price="robovoco"></span> <s data-was="robovoco"></s></p>
+        <div class="btns">
+          <a class="btn" data-buy="robovoco" href="#">Buy RoboVoco · <span data-price="robovoco"></span></a>
+          <a class="btn ghost" data-demo="robovoco" href="#">Try the free demo</a>
+        </div>
+        <dl class="specs">
+          <div><dt>Formats</dt><dd>VST3 · App</dd></div>
+          <div><dt>Modes</dt><dd>4</dd></div>
+          <div><dt>Platform</dt><dd>Windows x64</dd></div>
+        </dl>
+      </div>
+      <div class="shot reveal"><img src="img/robovoco.webp" width="1280" height="754" alt="RoboVoco: a folded paper face, mode buttons, a 24-band display and large knobs"></div>
+    </div>
+  </section>
+
+  <section class="block" id="listen">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Listen</span><h2>hear it first.</h2></div>
+        <p>Demos played through RoboVoco, straight out of the plugin.</p>
+      </div>
+      <div class="demos reveal" data-demos="robovoco"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Four modes</span><h2>one signal path, four characters.</h2></div>
+        <p>A mode is a position on six controls inside one engine, not a separate chain. Switching is instant and silent, and all four sit within a decibel of each other.</p>
+      </div>
+      <div class="reveal">
+        <div class="cards flow">
+          <div class="card"><h3>Robot</h3><p>A filterbank with hard ring modulation. The off-key partials are what make it sound like a machine.</p></div>
+          <div class="card"><h3>Vocoder</h3><p>A 24-band channel vocoder, tuned so the words stay clear.</p></div>
+          <div class="card"><h3>Talkbox</h3><p>A model of one vocal tract, re-fitted to the singer about every 5 ms.</p></div>
+          <div class="card"><h3>Acid</h3><p>A four-pole ladder filter with envelope and tempo-locked motion on the cutoff.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">The front panel</span><h2>six controls do the work.</h2></div>
+        <p>Key and Scale sit next to a live readout of the note it hears, so the carrier lands on the right notes. Set them to your song first.</p>
+      </div>
+      <div class="reveal">
+        <div class="cards ">
+          <div class="card"><h3>Character</h3><p>How hard the transformation bites.</p></div>
+          <div class="card"><h3>Formant</h3><p>Moves the whole vocal tract up to an octave either way.</p></div>
+          <div class="card"><h3>Clarity</h3><p>Turn it up when the words aren't coming through.</p></div>
+          <div class="card"><h3>Motion</h3><p>Depth of the tempo-locked movement on cutoff and gate.</p></div>
+          <div class="card"><h3>Smooth</h3><p>Pulls back any band that rings above its neighbours.</p></div>
+          <div class="card"><h3>Mix</h3><p>Equal-power dry and wet.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Rhythm and presets</span><h2>made for breakbeat vocals.</h2></div>
+        <p>Patterns chop the voice in time: Offbeat, Breaks, Stutter and Tresillo, with swing. Delay and reverb duck under the voice and come back in the gaps. Route MIDI to play chords, or send your own synth into the carrier input.</p>
+      </div>
+      <div class="reveal">
+        <ul class="chips"><li>Acid Syllables</li><li>Warehouse Stutter</li><li>Offbeat Transmission</li><li>Swing Circuit</li><li>Tresillo Vox</li><li>Subterranean Voice</li><li>Glass Choir</li><li>Pressure Speak</li><li>North Star Vocal</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta-band reveal">
+      <h2>get robovoco.</h2>
+      <p><s data-was="robovoco"></s> <span data-price="robovoco"></span> · one licence, yours forever, free updates</p>
+      <div class="btns"><a class="btn on-c" data-buy="robovoco" href="#">Buy now · <span data-price="robovoco"></span></a><a class="btn ghost on-c" data-demo="robovoco" href="#">Try the free demo</a></div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="More plugins">
+    <a href="twig.html" data-p="twig"><span class="label">← Previous</span><strong>Twig</strong></a>
+    <a href="lucha-effects.html" data-p="lucha"><span class="label">Next →</span><strong>Lucha Effects</strong></a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="foot-brand">calobra<i>.</i></p>
+        <p class="legal">© 2026 Calobra Instruments</p>
+      </div>
+      <ul>
+        <li><a href="lucha-effects.html">Lucha Effects</a></li>
+        <li><a href="move-a-side-chain.html">Move-a-Side chain</a></li>
+        <li><a href="chordflow.html">ChordFlow</a></li>
+        <li><a href="twig.html">Twig</a></li>
+        <li><a href="robovoco.html">RoboVoco</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+<script src="scratch.js"></script>
+</body>
+</html>

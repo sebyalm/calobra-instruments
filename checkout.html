@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout · Calobra Instruments</title>
+<meta name="description" content="Buy Calobra plugins: pick a plugin or the bundle and pay securely with Lemon Squeezy.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#e6e6ea">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="checkout.css">
+<script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+</head>
+<body data-page="checkout">
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Calobra Instruments, home">calobra<i></i></a>
+    <nav aria-label="Main">
+      <div class="nav-drop"><a href="index.html#plugins" aria-haspopup="true">Plugins</a><div class="mega"></div></div>
+      <a href="index.html#bundle">Bundle</a>
+      <a href="index.html#free">Free plugin</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <span class="secure label">Secure checkout</span>
+  </div>
+</header>
+
+<main class="wrap checkout">
+  <section class="co-pick">
+    <a class="crumbs label" href="index.html#plugins">← Keep browsing</a>
+    <h1>checkout<span class="dot">.</span></h1>
+    <p class="co-lead">Pick a plugin or grab all five. One licence, yours forever, with free updates.</p>
+    <fieldset class="picks" id="picks">
+      <legend class="sr">Choose what to buy</legend>
+    </fieldset>
+    <p class="co-free" data-p="lucha">Looking for Lucha Effects? It's free. <a href="index.html#free">Get it here →</a></p>
+  </section>
+
+  <aside class="co-summary" aria-label="Order summary">
+    <div class="co-card">
+      <span class="label">Your order</span>
+      <div class="co-line co-item">
+        <div><b id="sum-name"></b><small id="sum-kind"></small></div>
+        <span id="sum-price"></span>
+      </div>
+      <button class="co-upsell" id="upsell" type="button" hidden></button>
+
+      <form class="co-code" id="code-form">
+        <label class="label" for="code">Discount code</label>
+        <div class="co-row">
+          <input id="code" name="code" autocomplete="off" placeholder="SCRATCH10" spellcheck="false">
+          <button class="btn ghost" type="submit">Apply</button>
+        </div>
+        <p class="co-msg" id="code-msg" aria-live="polite"></p>
+      </form>
+
+      <div class="co-line co-discount" id="sum-discount" hidden>
+        <span id="sum-discount-label"></span><span id="sum-discount-amount"></span>
+      </div>
+
+      <label class="label" for="email">Email for your licence <span class="co-opt">(optional, you can add it on the next step)</span></label>
+      <input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+
+      <div class="co-line co-total"><span>Total</span><strong id="sum-total"></strong></div>
+      <p class="co-vat">VAT is added at payment where it applies.</p>
+
+      <button class="btn co-pay" id="pay" type="button">Continue to secure payment →</button>
+      <p class="co-msg" id="pay-msg" aria-live="polite"></p>
+
+      <ul class="co-trust">
+        <li>Instant download after payment</li>
+        <li>VST3 and standalone on Windows, plus AU on macOS for Lucha Effects and Move-a-Side chain</li>
+        <li>Payments handled by Lemon Squeezy: cards, PayPal, Apple Pay</li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="foot-brand">calobra<i>.</i></p>
+        <p class="legal">© 2026 Calobra Instruments</p>
+      </div>
+      <ul>
+        <li><a href="lucha-effects.html">Lucha Effects</a></li>
+        <li><a href="move-a-side-chain.html">Move-a-Side chain</a></li>
+        <li><a href="chordflow.html">ChordFlow</a></li>
+        <li><a href="twig.html">Twig</a></li>
+        <li><a href="robovoco.html">RoboVoco</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>

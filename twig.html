@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twig · Calobra Instruments</title>
+<meta name="description" content="Twig is a resynthesis synth plugin. Drop in a short sample, Twig rebuilds it as a playable 16-voice synth, then grow it into twelve families of mutations. VST3 and standalone.">
+<meta name="theme-color" content="#e6e6ea">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="img/twig.webp">
+</head>
+<body data-p="twig">
+
+<div class="ticker" aria-label="Launch sale">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Calobra Instruments, home">calobra<i></i></a>
+    <nav aria-label="Main">
+      <div class="nav-drop"><a href="index.html#plugins" aria-haspopup="true">Plugins</a><div class="mega"></div></div>
+      <a href="index.html#bundle">Bundle</a>
+      <a href="index.html#free">Free plugin</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="index.html#bundle">Get the bundle<span> · <b data-price="bundle"></b></span></a>
+  </div>
+</header>
+
+<main>
+  <section class="p-hero">
+    <div class="wrap">
+      <div class="reveal">
+        <a class="crumbs label" href="index.html#plugins">← All plugins</a>
+        <span class="label kind">Resynthesis synth</span>
+        <h1>twig<span class="dot">.</span></h1>
+        <p class="lead">Drop in a short sample and Twig rebuilds it as a playable synth. Then turn two knobs and grow it into something you couldn't have sampled.</p>
+        <p class="price-line"><span data-price="twig"></span> <s data-was="twig"></s></p>
+        <div class="btns">
+          <a class="btn" data-buy="twig" href="#">Buy Twig · <span data-price="twig"></span></a>
+          <a class="btn ghost" data-demo="twig" href="#">Try the free demo</a>
+        </div>
+        <dl class="specs">
+          <div><dt>Formats</dt><dd>VST3 · App</dd></div>
+          <div><dt>Polyphony</dt><dd>16 voices</dd></div>
+          <div><dt>Families</dt><dd>12</dd></div>
+        </dl>
+      </div>
+      <div class="shot reveal"><img src="img/twig.webp" width="902" height="708" alt="Twig with a bass sample loaded: its spectrum and a tree of twelve mutation families on the green LCD, above six keys and the Family, Weird, DNA and Cross knobs"></div>
+    </div>
+  </section>
+
+  <section class="block" id="listen">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Listen</span><h2>hear it first.</h2></div>
+        <p>Demos played through Twig, straight out of the plugin.</p>
+      </div>
+      <div class="demos reveal" data-demos="twig"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">From sample to instrument</span><h2>how a sound grows.</h2></div>
+        
+      </div>
+      <div class="reveal">
+        <ol class="steps">
+          <li><span><b>Drop a sample on the screen.</b> WAV, AIFF, FLAC or Ogg. Twig analyses up to two seconds and draws your sound as a tree.</span></li>
+          <li><span><b>Compare.</b> Original plays the analysed sample. Synth plays the rebuilt sound.</span></li>
+          <li><span><b>Turn Family and Weird.</b> Twelve families of mutations branch off the tip of the tree. Weird has five steps, from your sound itself to the wildest branch.</span></li>
+          <li><span><b>Keep it.</b> The branch becomes the new sound, so you can keep growing from there. Back undoes it.</span></li>
+          <li><span><b>Refine</b> searches the sample again and keeps any improvement. New Seed starts a fresh tree.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">Five pages, four knobs</span><h2>the knobs change job with the tab.</h2></div>
+        <p>Pick a tab along the top of the screen and the four knobs take on new jobs. Each page draws what they do: a filter curve, an envelope, echo taps, an oscillator shape.</p>
+      </div>
+      <div class="reveal">
+        <div class="cards flow">
+          <div class="card"><h3>Play</h3><p>Family, Weird, DNA, Cross</p></div>
+          <div class="card"><h3>Shape</h3><p>Cutoff, Reso, Drive, Output</p></div>
+          <div class="card"><h3>Env</h3><p>Attack, Decay, Sustain, Release</p></div>
+          <div class="card"><h3>FX</h3><p>Time, Feedback, Echo, Ambience</p></div>
+          <div class="card"><h3>Osc</h3><p>Wave, Mix, FM, Detune</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <div><span class="label">The engine</span><h2>built to play, not just to copy.</h2></div>
+        
+      </div>
+      <div class="reveal">
+        <div class="cards ">
+          <div class="card"><h3>Expressive</h3><p>16 voices, mono and glide, sustain, pitch bend, mod wheel and pressure.</p></div>
+          <div class="card"><h3>Detailed</h3><p>Up to 64 partials with shaped noise and attack detail. Pitch drops follow the source, like a kick falling from 230 Hz to 55 Hz.</p></div>
+          <div class="card"><h3>Breedable</h3><p>DNA blends back toward the source. Cross breeds your sound with a second sample.</p></div>
+          <div class="card"><h3>Self-contained</h3><p>The patch lives in your session. Reopen the project and it plays without the original file.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta-band reveal">
+      <h2>get twig.</h2>
+      <p><s data-was="twig"></s> <span data-price="twig"></span> · one licence, yours forever, free updates</p>
+      <div class="btns"><a class="btn on-c" data-buy="twig" href="#">Buy now · <span data-price="twig"></span></a><a class="btn ghost on-c" data-demo="twig" href="#">Try the free demo</a></div>
+    </div>
+  </section>
+
+  <nav class="wrap pager" aria-label="More plugins">
+    <a href="chordflow.html" data-p="chordflow"><span class="label">← Previous</span><strong>ChordFlow</strong></a>
+    <a href="robovoco.html" data-p="robovoco"><span class="label">Next →</span><strong>RoboVoco</strong></a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="foot-brand">calobra<i>.</i></p>
+        <p class="legal">© 2026 Calobra Instruments</p>
+      </div>
+      <ul>
+        <li><a href="lucha-effects.html">Lucha Effects</a></li>
+        <li><a href="move-a-side-chain.html">Move-a-Side chain</a></li>
+        <li><a href="chordflow.html">ChordFlow</a></li>
+        <li><a href="twig.html">Twig</a></li>
+        <li><a href="robovoco.html">RoboVoco</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+<script src="scratch.js"></script>
+</body>
+</html>
