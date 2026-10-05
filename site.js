@@ -443,8 +443,67 @@ function wireScroll() {
   reveals.forEach(el => io.observe(el));
 }
 
+// ---- logo: hover and the l turns into a snake, slithers into the red dot, a new l grows back ----
+function wireLogo() {
+  const logo = document.querySelector(".top .logo");
+  if (!logo || reducedMotion) return;
+  logo.innerHTML = `<span>ca<span class="logo-l">l</span>obra</span><i></i>`;
+  const l = logo.querySelector(".logo-l"), dot = logo.querySelector("i");
+  let busy = false;
+
+  logo.addEventListener("mouseenter", () => {
+    if (busy) return;
+    busy = true;
+    const o = logo.getBoundingClientRect(), lr = l.getBoundingClientRect(), dr = dot.getBoundingClientRect();
+    const fs = parseFloat(getComputedStyle(logo).fontSize);
+    const x = lr.left - o.left + lr.width / 2, base = dr.bottom - o.top, top = base - fs * .72;
+    const ex = dr.left - o.left + dr.width / 2, ey = dr.top - o.top + dr.height / 2;
+    const y = base + fs * .2, amp = fs * .12, half = fs * .3;
+
+    // the track: down the l, curl out under the word, wiggle right, rise into the dot
+    let d = `M${x} ${top}V${base}Q${x} ${y} ${x + half} ${y}`, cx = x + half;
+    d += `Q${cx + half / 2} ${y - amp * 2} ${cx += half} ${y}`;
+    while (cx + half < ex - half) d += `T${cx += half} ${y}`;
+    d += `Q${ex} ${y} ${ex} ${ey}`;
+
+    logo.insertAdjacentHTML("beforeend", `<svg class="logo-snake" width="${o.width}" height="${o.height}" aria-hidden="true">
+      <path d="${d}" fill="none" stroke="currentColor" stroke-width="${fs * .2}" stroke-linecap="round"/>
+      <line stroke="var(--sale)" stroke-width="${fs * .05}" stroke-linecap="round"/>
+      <circle r="${fs * .045}" fill="var(--bg)"/></svg>`);
+    const svg = logo.lastElementChild, [path, tongue, eye] = svg.children;
+    const total = path.getTotalLength(), len = base - top, speed = fs * 4.5;
+    path.style.strokeDasharray = `${len} ${total + len}`;
+    l.style.opacity = 0;
+
+    const t0 = performance.now();
+    const frame = now => {
+      const t = now - t0, s = len + t / 1000 * speed;   // s = where the head is along the track
+      path.style.strokeDashoffset = len - s;
+      if (s < total) {
+        const h = path.getPointAtLength(s), b = path.getPointAtLength(s - 1);
+        const dx = h.x - b.x, dy = h.y - b.y, flick = Math.sin(t / 45) > 0 ? fs * .16 : 0;
+        eye.setAttribute("cx", h.x - dx * fs * .04 + dy * fs * .04);
+        eye.setAttribute("cy", h.y - dy * fs * .04 - dx * fs * .04);
+        tongue.setAttribute("x1", h.x); tongue.setAttribute("y1", h.y);
+        tongue.setAttribute("x2", h.x + dx * flick); tongue.setAttribute("y2", h.y + dy * flick);
+      } else eye.style.display = tongue.style.display = "none";
+      if (s < total + len) return requestAnimationFrame(frame);
+
+      svg.remove();
+      dot.animate([{ transform: "scale(1)" }, { transform: "scale(1.5)" }, { transform: "scale(1)" }], { duration: 260 });
+      l.style.opacity = "";
+      l.style.transformOrigin = `50% ${base - (lr.top - o.top)}px`;
+      l.animate([{ transform: "scaleY(0)" }, { transform: "scaleY(1)" }],
+        { duration: 420, delay: 160, fill: "backwards", easing: "cubic-bezier(.3, 1.6, .5, 1)" })
+        .finished.then(() => { busy = false; });
+    };
+    requestAnimationFrame(frame);
+  });
+}
+
 paintPrices();
 paintTicker();
+wireLogo();
 buildMega();
 buildMobileMenu();
 buildReel();

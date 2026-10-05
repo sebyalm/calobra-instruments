@@ -64,7 +64,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 900; letter-spacing: -.03
 .top.scrolled { background: rgba(230, 230, 234, .82); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); box-shadow: 0 1px 0 var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .logo { font: 900 23px/1 var(--display); letter-spacing: -.04em; text-decoration: none; display: flex; align-items: baseline; gap: 2px; }
-.logo i { width: 9px; height: 9px; border-radius: 50%; background: var(--sale); display: inline-block; }
+.logo i { width: 9px; height: 9px; border-radius: 50%; background: var(--sale); display: inline-block; position: relative; z-index: 1; }
+.logo { position: relative; white-space: nowrap; }
+.logo-l { display: inline-block; }
+.logo-snake { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
 .top nav { display: flex; align-items: center; gap: 4px; }
 .nav-drop { display: flex; }
 .top nav > a, .nav-drop > a { display: inline-flex; align-items: center; line-height: 1.2; text-decoration: none; font-weight: 500; font-size: 15px; padding: 9px 14px; border-radius: 999px; transition: background-color .2s ease; }
