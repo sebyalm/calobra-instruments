@@ -193,6 +193,17 @@ h1, h2, h3 { font-family: var(--display); font-weight: 900; letter-spacing: -.03
 .shot::before { content: ""; position: absolute; inset: 0; background: radial-gradient(100% 60% at 50% 0%, rgba(255,255,255,.3), transparent 60%); pointer-events: none; }
 .shot img { position: relative; border-radius: 12px; box-shadow: 0 40px 70px -30px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.1); }
 .shot img + img { margin-top: 18px; }
+/* carousel: native scroll-snap, site.js only wires the arrows and the video */
+.carousel { padding: 0; }
+.slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+.slides::-webkit-scrollbar { display: none; }
+.slide { flex: 0 0 100%; scroll-snap-align: center; display: grid; place-items: center; aspect-ratio: 5 / 4; padding: clamp(18px, 4vw, 48px); }
+.slide img, .slide video { position: relative; max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 12px; box-shadow: 0 40px 70px -30px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.1); }
+.car-btn { position: absolute; top: 50%; translate: 0 -50%; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,.85); color: var(--ink); font-size: 20px; cursor: pointer; box-shadow: 0 6px 18px -6px rgba(0,0,0,.4); transition: opacity .2s; }
+.car-btn:hover { background: #fff; }
+.car-btn:disabled { opacity: 0; pointer-events: none; }
+.car-btn.prev { left: 10px; }
+.car-btn.next { right: 10px; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
 .chips li { padding: 8px 13px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); font-size: 14px; font-weight: 500; }
@@ -497,7 +508,7 @@ html.menu-open .top { background: var(--bg); box-shadow: 0 1px 0 var(--line); }
 .tiles .tile.reveal:nth-child(5) { transition-delay: .24s; }
 /* screenshots settle into place as they scroll in (browsers with scroll-driven animations) */
 @supports (animation-timeline: view()) {
-  .shot img:first-of-type { animation: settle linear both; animation-timeline: view(); animation-range: entry 0% cover 40%; }
+  .shot > img:first-of-type { animation: settle linear both; animation-timeline: view(); animation-range: entry 0% cover 40%; }
   @keyframes settle { from { transform: scale(.88) rotate(-2.5deg); } to { transform: none; } }
 }
 @media (prefers-reduced-motion: reduce) {

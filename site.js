@@ -501,8 +501,67 @@ function wireLogo() {
   });
 }
 
+// ---- hero carousel: auto-advances every few seconds, but sits on the video until it has played through once.
+// Hover or focus pauses it; any click, tap or swipe hands it to the visitor for good (the video then just loops). ----
+const SLIDE_MS = 4000;
+function wireCarousel() {
+  const car = document.querySelector(".carousel");
+  if (!car) return;
+  const slides = car.querySelector(".slides"), prev = car.querySelector(".prev"), next = car.querySelector(".next");
+  const video = car.querySelector("video");
+  const count = slides.children.length;
+  const index = () => Math.round(slides.scrollLeft / slides.clientWidth);
+  const go = i => slides.scrollTo({ left: (i % count) * slides.clientWidth });
+  let auto = !reducedMotion, held = false, timer, settle;
+
+  const schedule = () => {
+    clearTimeout(timer);
+    if (!auto || held) return;
+    if (video && slides.children[index()].contains(video)) return;   // the video's "ended" moves on instead
+    timer = setTimeout(() => go(index() + 1), SLIDE_MS);
+  };
+  const stop = () => { auto = false; clearTimeout(timer); if (video) video.loop = true; };
+
+  prev.addEventListener("click", () => go(Math.max(index() - 1, 0)));
+  next.addEventListener("click", () => go(index() + 1));
+  const ends = () => {
+    prev.disabled = slides.scrollLeft < 4;
+    next.disabled = slides.scrollLeft + slides.clientWidth > slides.scrollWidth - 4;
+  };
+  slides.addEventListener("scroll", () => {
+    ends();
+    clearTimeout(timer); clearTimeout(settle);
+    settle = setTimeout(schedule, 150);   // ponytail: debounce instead of scrollend, which older Safari lacks
+  }, { passive: true });
+  car.addEventListener("pointerdown", stop);
+  car.addEventListener("wheel", e => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) stop(); }, { passive: true });
+  car.addEventListener("mouseenter", () => { held = true; clearTimeout(timer); });
+  car.addEventListener("mouseleave", () => { held = false; schedule(); });
+  car.addEventListener("focusin", () => { held = true; clearTimeout(timer); });
+  car.addEventListener("focusout", () => { held = false; schedule(); });
+  ends();
+  schedule();
+
+  if (!video) return;
+  if (reducedMotion) { video.controls = true; return; }
+  video.loop = !auto;
+  video.addEventListener("ended", () => {
+    if (auto && !held) go(index() + 1);
+    else video.play();   // paused or handed over: keep looping
+  });
+  new IntersectionObserver(([en]) => {
+    if (!en.isIntersecting) return video.pause();
+    if (auto) video.currentTime = 0;   // arrive at the start so the whole clip plays before moving on
+    video.play().catch(() => {   // autoplay blocked: show controls, and don't get stuck on this slide
+      video.controls = true;
+      if (auto && !held) timer = setTimeout(() => go(index() + 1), SLIDE_MS);
+    });
+  }, { root: slides, threshold: .6 }).observe(video);
+}
+
 paintPrices();
 paintTicker();
+wireCarousel();
 wireLogo();
 buildMega();
 buildMobileMenu();
